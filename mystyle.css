@@ -152,6 +152,7 @@ nav a:hover {
 
 .product {
     width: 500px;
+   
     background: #2a2a2a;
     padding: 20px;
     margin-bottom: 50px;
@@ -167,8 +168,9 @@ nav a:hover {
 
 .product img {
     width: 100%;
-    height: auto;
+    height: 300px  ;
     border-radius: 10px;
+    display: flexbox;
 }
 
 .product h3 {
