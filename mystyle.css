@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    min-height: 150vh;
+    min-height: 100vh;
     background-color: #1C1C1C;
     color: white;
     font-family: Arial, sans-serif;
@@ -168,7 +168,7 @@ nav a:hover {
 
 .product img {
     width: 100%;
-    max-height: 400px  ;
+    max-height: 370px  ;
     border-radius: 10px;
     display: block;
     object-fit: cover;
