@@ -7,12 +7,10 @@
 </head>
 
 <body>
-   <nav>
+    <nav>
 
         <a href="index.html">Home</a>
-        <a href="my1stcategory.html">Coffee Beans(PAGE1)</a>
-        <a href="my2ndcategory.html">Coffee Beans(PAGE2)</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html#contact">Contact</a>
 
     </nav>
 
@@ -27,26 +25,32 @@
     </section>
 
     <div class="arrow">⌄</div>
-    
+
 
     <section id="about">
         <div class="content">
             <img class="img1" src="resources/Black Ivory1.jpg" alt="Black Ivory1">
-            <video class="img1" controls autoplay loop  >
+            <video class="img1" controls autoplay loop>
                 <source src="resources/myshop.mp4" type="video/mp4">
             </video>
-        
+
         </div>
-            <p class="text">Black Ivory Coffee is special not only for its taste,
-                but also for its rarity, which makes <strong> a symbol of luxury.</strong>
-                Producing this coffee requires up to <u>33 kilograms of coffee cherries to yield just 1 kilogram of roasted coffee</u>,
-                since many beans are damaged or lost during the elephant’s digestive process. Each year,
-                only about 225 kilograms are produced, <b>making Black Ivory Coffee one of the rarest coffees in the world.</b>
-            </p>
-        
+        <p class="text">We believe that <strong>great coffee begins with quality beans</strong>.
+            Our shop carefully selects coffee beans from <u>the finest origins around the world</u>, including
+            <b>Typica</b>, <b>Mocha</b>, <b>Robusta</b>, <b>Bourbon</b>, <b>Geisha</b>, and <b>La Colombe</b>, to
+            deliver a rich variety of flavors — from <u>smooth and mellow</u> to <u>bold and intense</u> in every cup.
+
+        </p>
+
     </section>
 
-   
+
+    <div class="nextpage-container">
+        <a class="nextpage" href="my1stcategory.html">&gt;</a>
+    </div>
+
+
+
     <section id="contact">
         <footer><!--แท็กใหม่3-->
             <p>ติดต่อเรา: Line @goldstar099 | อีเมล: goldstart.2112@gmail.com | โทร: 099-118-6744</p>
@@ -55,31 +59,17 @@
     </section>
 
     <div>
+
         <script>
-            const basePrice = {
-                1: 2500,
-                2: 28000,
-                3: 425
-            };
-            function updatePrice(id) {
-                let qty = document.getElementById("qty" + id).value;
-                let total = basePrice[id] * qty;
-                document.getElementById("total" + id).innerText = total.toLocaleString();
-            }
-            function buy(id) {
-                let qty = document.getElementById("qty" + id).value;
-                let total = basePrice[id] * qty;
-                alert("คุณได้สั่งซื้อสินค้า จำนวน " + qty + " ชิ้น รวม " + total.toLocaleString() + " บาท");
-            }
+            window.addEventListener("scroll", function () {
+                const navbar = document.querySelector("nav");
+                let fade = 1 - window.scrollY / 200;
+                if (fade < 0) fade = 0;
+                navbar.style.opacity = fade;
+            });
         </script>
-        <script>
-        window.addEventListener("scroll", function () {
-            const navbar = document.querySelector("nav");
-            let fade = 1 - window.scrollY / 200;
-            if (fade < 0) fade = 0;
-            navbar.style.opacity = fade;});
-            </script>
     </div>
 
 </body>
+
 </html>

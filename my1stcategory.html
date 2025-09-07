@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="mystyle.css">
-    
+
 </head>
 
 <body>
@@ -11,9 +11,7 @@
     <nav>
 
         <a href="index.html">Home</a>
-        <a href="my1stcategory.html">Coffee Beans(PAGE1)</a>
-        <a href="my2ndcategory.html">Coffee Beans(PAGE2)</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html#contact">Contact</a>
 
     </nav>
 
@@ -39,22 +37,44 @@
                 <button onclick="buy(2)">ซื้อเลย</button>
             </div>
             <div class="product">
-                <img src="resources/robusta.jpeg"  alt="robusta">
+                <img src="resources/robusta.jpeg" alt="robusta">
                 <h3>Robusta 250 กรัม</h3>
                 <p>ราคา: 425 บาท/แพ็ค</p>
-                <label>จำนวน: <input type="number" id="qty3" value="1" min="1" onchange="updatePrice(2)"></label>
+                <label>จำนวน: <input type="number" id="qty3" value="1" min="1" onchange="updatePrice(3)"></label>
                 <p>รวม: <span id="total3">425</span> บาท</p>
                 <button onclick="buy(3)">ซื้อเลย</button>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <footer><!--แท็กใหม่3-->
-            <p>ติดต่อเรา: Line @goldstar099 | อีเมล: goldstart.2112@gmail.com | โทร: 099-118-6744</p>
-            <p>Copyright © 2025 IVORY COFFEE SHOP. สงวนลิขสิทธิ์</p>
-        </footer>
-    </section>
+    <div>
+        <script>
+            const basePrice = {
+                1: 2500,
+                2: 28000,
+                3: 425
+            };
+            function updatePrice(id) {
+                let qty = document.getElementById("qty" + id).value;
+                let total = basePrice[id] * qty;
+                document.getElementById("total" + id).innerText = total.toLocaleString();
+            }
+            function buy(id) {
+                let qty = document.getElementById("qty" + id).value;
+                let total = basePrice[id] * qty;
+                alert("คุณได้สั่งซื้อสินค้า จำนวน " + qty + " ชิ้น รวม " + total.toLocaleString() + " บาท");
+            }
+        </script>
+
+
+        <div class="nextpage-container">
+            <a class="nextpage" href="index.html">&lt;</a>
+            <a class="nextpage" href="my2ndcategory.html">&gt;</a>
+        </div>
+
+
+
+    
 
 </body>
 
