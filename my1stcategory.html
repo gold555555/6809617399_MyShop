@@ -20,7 +20,8 @@
 
             <div class="product">
                 <img src="resources/Typica Coffee3.webp" alt="Typica Coffee 35g">
-                <h3>Typica Coffee 35 กรัม</h3>
+                <h3>Typica Coffee 35 กรัม</h3> 
+                <p>รสชาติ:หวาน หอมกลิ่นดอกไม้และผลไม้</p>    
                 <p>ราคา: 2500 บาท/ซอง</p>
                 <label>จำนวน: <input type="number" id="qty1" value="1" min="1" onchange="updatePrice(1)"></label>
                 <!--แท็กใหม่1-->
@@ -30,15 +31,17 @@
 
             <div class="product">
                 <img src="resources/Mocha Coffee2.jpg" alt="Mocha Coffee 420g">
-                <h3>Mocha Coffee 420 กรัม</h3>
-                <p>ราคา: 28000 บาท/แพ็ค</p>
+                <h3>Mocha Coffee 35 กรัม</h3>
+                <p>รสชาติ:ที่ผสมผสานระหว่างความขมของกาแฟ ความหวานของช็อกโกแลต</p>
+                <p>ราคา: 250 บาท/แพ็ค</p>
                 <label>จำนวน: <input type="number" id="qty2" value="1" min="1" onchange="updatePrice(2)"></label>
-                <p>รวม: <span id="total2">28000</span> บาท</p>
+                <p>รวม: <span id="total2">250</span> บาท</p>
                 <button onclick="buy(2)">ซื้อเลย</button>
             </div>
             <div class="product">
                 <img src="resources/robusta.jpeg" alt="robusta">
-                <h3>Robusta 250 กรัม</h3>
+                <h3>Robusta Coffee 250 กรัม</h3>
+                <p>รสชาติ:มีกลิ่นค่อนข้างฉุน รสชาติเข้มข้น ขม และมีบอดี้หนัก</p>
                 <p>ราคา: 425 บาท/แพ็ค</p>
                 <label>จำนวน: <input type="number" id="qty3" value="1" min="1" onchange="updatePrice(3)"></label>
                 <p>รวม: <span id="total3">425</span> บาท</p>
@@ -51,7 +54,7 @@
         <script>
             const basePrice = {
                 1: 2500,
-                2: 28000,
+                2: 250,
                 3: 425
             };
             function updatePrice(id) {
